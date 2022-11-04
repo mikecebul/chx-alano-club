@@ -20,6 +20,8 @@ export default function NavBar() {
             <NavLink href={"/"}>Home</NavLink>
             <NavLink href={"/meetings"}>Meetings</NavLink>
             <NavLink href={"/virtual-basket"}>Donate</NavLink>
+            <NavLink href={"/news"}>News</NavLink>
+            <NavLink href={"/other-meetings"}>Other Meetings</NavLink>
           </div>
           <div className="px-16">
             <ThemeButton className="bg-slate-300 dark:bg-slate-600" />
