@@ -16,10 +16,10 @@ export default function NavLink({ href, children }: TNavLink) {
   return (
     <div className={`${!active ? "hover:scale-105 transistion duration-75 ease-out" : ""}`}>
       <Link
-        className={`
+        className={`font-semibold
         ${
           active
-            ? "underline underline-offset-8 decoration-pink-500 decoration-2 "
+            ? "underline underline-offset-8 dark:decoration-pink-500 decoration-pink-800 decoration-2"
             : ""
         }
       `}
