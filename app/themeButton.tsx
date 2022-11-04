@@ -6,7 +6,7 @@ type TButton = {
   children?: React.ReactNode;
   className?: string;
 };
-const moon = (
+const Moon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -23,7 +23,7 @@ const moon = (
   </svg>
 );
 
-const sun = (
+const Sun = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -40,7 +40,7 @@ const sun = (
   </svg>
 );
 
-export default function Button({ children, className }: TButton) {
+export default function ThemeButton({ children, className }: TButton) {
   const { resolvedTheme, theme, setTheme } = useTheme();
   return (
     <button
@@ -49,7 +49,7 @@ export default function Button({ children, className }: TButton) {
         setTheme(resolvedTheme === "light" ? "dark" : "light");
       }}
     >
-      {theme === "light" ? moon : sun}
+      {theme === "light" ? Moon : Sun}
       {children}
     </button>
   );

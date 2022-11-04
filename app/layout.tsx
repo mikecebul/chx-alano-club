@@ -1,5 +1,5 @@
 import "./globals.css";
-import NavBar from "./NavBar";
+import NavBar from "./navBar";
 import { Providers } from "./providers";
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="text-slate-900 bg-slate-100 dark:text-slate-100 dark:bg-slate-900">
+      <body className="text-slate-800 bg-slate-50 dark:text-slate-100 dark:bg-slate-900">
         <Providers>
           <NavBar />
           {children}

@@ -1,7 +1,9 @@
 export default function Home() {
   return (
-    <div>
-      <h2 className="p-16 text-4xl text-center">Hello World</h2>
+    <div className="p-4 flex flex-col">
+      <h3 className="my-8 mb font-semibold text-4xl text-center">
+        Hello World
+      </h3>
     </div>
   );
 }
