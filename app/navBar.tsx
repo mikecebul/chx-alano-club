@@ -28,7 +28,7 @@ const links = [
 export default function NavBar() {
   return (
     <header className="">
-      <nav className="flex py-3 px-16 z-10 shadow-lg rounded-b-lg dark:bg-slate-900 bg-slate-100">
+      <nav className="flex py-3 px-16 z-10 shadow-lg rounded-b-lg dark:bg-slate-900 bg-slate-50">
         <div className="flex-col text-center">
           <h1 className="text-2xl">Serenity House</h1>
           <h2 className="text-xs">Charlevoix Alano Club</h2>

@@ -19,7 +19,7 @@ export default function NavLink({ href, children }: TNavLink) {
         className={`font-semibold
         ${
           active
-            ? "underline underline-offset-8 dark:decoration-pink-500 decoration-pink-800 decoration-2"
+            ? "underline underline-offset-8 dark:decoration-pink-600 decoration-pink-700 decoration-2"
             : ""
         }
       `}
