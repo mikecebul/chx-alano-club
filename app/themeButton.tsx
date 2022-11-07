@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes";
 
 type TButton = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 };
 const moon = (
