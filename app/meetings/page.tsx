@@ -1,6 +1,5 @@
-// import React, { use } from "react";
-// import { cache } from "react";
 import { db } from "../../lib/prisma";
+import { sortedMeetingsByDayAndTime } from "../../lib/sort";
 
 export const revalidate = 3600;
 
@@ -11,28 +10,11 @@ const getMeetings = async () => {
 
 const columns = ["Day", "Time", "Group", "Host", "Type"];
 
-const map = {
-  Sunday: 0,
-  Monday: 1,
-  Tuesday: 2,
-  Wednesday: 3,
-  Thursday: 4,
-  Friday: 5,
-  Saturday: 6,
-};
-
 export default async function MeetingPage() {
   const meetings = await getMeetings();
-  const sortedMeetingsByTime = meetings.sort((a, b) => {
-    return (
-      Date.parse("1970/01/01 " + a.time) - Date.parse("1970/01/01 " + b.time)
-    );
-  });
-  const sortedMeetingsByDay = sortedMeetingsByTime.sort((a, b) => {
-    return map[a.day as keyof typeof map] - map[b.day as keyof typeof map];
-  });
+  const sortedMeetings = sortedMeetingsByDayAndTime(meetings);
 
-  if (!sortedMeetingsByDay) {
+  if (!sortedMeetings) {
     return (
       <div>
         <h3>Fuck</h3>
@@ -56,7 +38,7 @@ export default async function MeetingPage() {
             </tr>
           </thead>
           <tbody className="bg-slate-800 text- text-slate-300">
-            {sortedMeetingsByDay.map((meeting) => (
+            {sortedMeetings.map((meeting) => (
               <tr key={meeting.id} className="even:bg-slate-700">
                 <td className="py-3 px-6">{meeting.day}</td>
                 <td className="py-3 px-6">{meeting.time}</td>
