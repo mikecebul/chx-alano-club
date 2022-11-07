@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import NavLink from "./nav-link";
 
 export default function NavBar() {
   return (
@@ -11,8 +12,8 @@ export default function NavBar() {
         </div>
         <div className="flex flex-grow justify-between items-center">
           <div className=" px-16 space-x-8 flex">
-            <Link href={"/"}>Home</Link>
-            <Link href={"/meetings"}>Meetings</Link>
+            <NavLink href={"/"}>Home</NavLink>
+            <NavLink href={"/meetings"}>Meetings</NavLink>
           </div>
           {/* <div className="px-16">{renderThemeChanger()}</div> */}
         </div>
