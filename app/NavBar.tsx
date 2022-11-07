@@ -1,6 +1,11 @@
 import Link from "next/link";
 import React from "react";
 import NavLink from "./nav-link";
+import Button from "./themeButton";
+
+function renderThemeChanger() {
+  return <Button className="bg-slate-300 dark:bg-slate-600" />;
+}
 
 export default function NavBar() {
   return (
@@ -15,7 +20,7 @@ export default function NavBar() {
             <NavLink href={"/"}>Home</NavLink>
             <NavLink href={"/meetings"}>Meetings</NavLink>
           </div>
-          {/* <div className="px-16">{renderThemeChanger()}</div> */}
+          <div className="px-16">{renderThemeChanger()}</div>
         </div>
       </nav>
     </header>
