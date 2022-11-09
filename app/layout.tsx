@@ -14,7 +14,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="text-slate-800 bg-slate-100 dark:text-slate-100 dark:bg-slate-800 ant">
+      <body className="text-slate-800 bg-slate-100 dark:text-slate-100 dark:bg-slate-800">
         <Providers>
           <NavBar />
           {children}
