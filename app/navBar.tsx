@@ -27,14 +27,14 @@ const links = [
 
 export default function NavBar() {
   return (
-    <header className="">
+    <header className="relative z-10">
       <nav className="flex py-3 px-16 shadow-lg rounded-b-lg dark:bg-slate-900 bg-slate-50">
-        <div className="flex-col text-center">
+        <div className="flex-col text-center flex-auto">
           <h1 className="text-2xl">Serenity House</h1>
           <h2 className="text-xs">Charlevoix Alano Club</h2>
         </div>
-        <div className="flex flex-grow justify-between items-center">
-          <div className=" px-16 space-x-8 flex">
+        <div className="flex-grow justify-between items-center hidden xl:flex">
+          <div className="px-16 space-x-8 flex">
             {links.map((link, idx) => (
               <NavLink key={idx} href={link.href}>
                 {link.name}
