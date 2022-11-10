@@ -28,22 +28,39 @@ const links = [
 export default function NavBar() {
   return (
     <header className="relative z-10">
-      <nav className="flex py-3 px-16 shadow-lg rounded-b-lg dark:bg-slate-900 bg-slate-50">
-        <div className="flex-col text-center flex-auto">
-          <h1 className="text-2xl">Serenity House</h1>
-          <h2 className="text-xs">Charlevoix Alano Club</h2>
+      <nav className="flex py-2 px-8 sm:px-16 xl:px-32 shadow-lg rounded-b-lg dark:bg-slate-900 bg-slate-50">
+        <div className="flex-col text-center">
+          <h1 className="text-lg xl:text-2xl">Serenity House</h1>
+          <h2 className="text-[0.6rem] font-light -mt-1 xl:text-xs xl-mt-0">Charlevoix Alano Club</h2>
         </div>
-        <div className="flex-grow justify-between items-center hidden xl:flex">
-          <div className="px-16 space-x-8 flex">
+        {/* Hide desktop navs on mobile */}
+        <div className="flex-grow justify-center items-center hidden lg:flex">
+          <div className="space-x-8 flex">
             {links.map((link, idx) => (
               <NavLink key={idx} href={link.href}>
                 {link.name}
               </NavLink>
             ))}
           </div>
-          <div className="px-16">
+        </div>
+          <div className="">
             <ThemeButton className="bg-slate-300 dark:bg-slate-600" />
           </div>
+        <div className="flex flex-auto justify-end items-center lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
         </div>
       </nav>
     </header>
