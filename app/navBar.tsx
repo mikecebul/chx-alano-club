@@ -28,10 +28,12 @@ const links = [
 export default function NavBar() {
   return (
     <header className="relative z-10">
-      <nav className="flex py-2 px-8 sm:px-16 xl:px-64 shadow-lg rounded-b-lg dark:bg-slate-900 bg-slate-50">
-        <div className="flex-col text-center">
+      <nav className="flex py-2 px-8 sm:px-32 2xl:px-64 shadow-lg rounded-b-lg dark:bg-slate-900 bg-slate-50">
+        <div className="flex-col text-center xl:w-[160px]">
           <h1 className="text-lg xl:text-2xl">Serenity House</h1>
-          <h2 className="text-[0.6rem] font-light -mt-1 xl:text-xs xl-mt-0">Charlevoix Alano Club</h2>
+          <h2 className="text-[0.6rem] font-light -mt-1 xl:text-xs xl-mt-0">
+            Charlevoix Alano Club
+          </h2>
         </div>
         {/* Hide desktop navs on mobile */}
         <div className="flex-grow justify-center items-center hidden lg:flex">
@@ -43,9 +45,11 @@ export default function NavBar() {
             ))}
           </div>
         </div>
-          <div className="">
-            <ThemeButton className="bg-slate-300 dark:bg-slate-600" />
-          </div>
+        {/* show on lg */}
+        <div className="hidden lg:flex flex-initial justify-center items-center xl:w-[160px]">
+          <ThemeButton className="bg-slate-300 dark:bg-slate-600" />
+        </div>
+        {/* hide on lg */}
         <div className="flex flex-auto justify-end items-center lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
