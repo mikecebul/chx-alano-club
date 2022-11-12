@@ -1,6 +1,6 @@
 import "./globals.css";
-import NavBar from "./navBar";
-import { Providers } from "./providers";
+import NavBarUI from "./rootComponents/navbarUI";
+import { Providers } from "./rootComponents/providers";
 
 export default function RootLayout({
   children,
@@ -16,7 +16,7 @@ export default function RootLayout({
       <head />
       <body className="text-slate-800 bg-slate-100 dark:text-slate-100 dark:bg-slate-800">
         <Providers>
-          <NavBar />
+          <NavBarUI />
           {children}
         </Providers>
       </body>

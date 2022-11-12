@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import alanoClub from "../public/Clubhouse1440.webp";
+import alanoClub from "./Clubhouse1440.webp";
 
 export default function Hero1() {
   return (

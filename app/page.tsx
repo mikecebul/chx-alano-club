@@ -1,4 +1,4 @@
-import Hero1 from "./hero1";
+import Hero1 from "./rootComponents/hero1";
 
 export default function Home() {
   return (
