@@ -6,27 +6,27 @@ import { usePathname } from "next/navigation";
 
 type TNavLink = {
   href: string;
+  mobile: boolean;
   children: React.ReactNode;
 };
 
-export default function NavLink({ href, children }: TNavLink) {
+export default function NavLink({ href, mobile, children }: TNavLink) {
   const path = usePathname();
   const active = href === path;
 
   return (
-    <div className={`${!active ? "hover:scale-105 transistion duration-75 ease-out" : ""}`}>
-      <Link
-        className={`font-semibold
+    <Link
+      className={`${mobile ? "block text-base" : "text-sm" } px-3 py-2 rounded-md text-sm font-medium 
         ${
           active
-            ? "underline underline-offset-8 dark:decoration-pink-600 decoration-pink-700 decoration-2"
-            : ""
+            ? "bg-gray-900 text-white"
+            : "text-gray-300 hover:bg-gray-700 hover:text-white"
         }
       `}
-        href={href}
-      >
-        {children}
-      </Link>
-    </div>
+      href={href}
+      aria-current={active ? "page" : undefined}
+    >
+      {children}
+    </Link>
   );
 }

@@ -40,7 +40,7 @@ export default function NavBar() {
         <div className="flex-grow justify-center items-center hidden lg:flex">
           <div className="space-x-8 flex">
             {links.map((link, idx) => (
-              <NavLink key={idx} href={link.href}>
+              <NavLink key={idx} href={link.href} mobile={false}>
                 {link.name}
               </NavLink>
             ))}
