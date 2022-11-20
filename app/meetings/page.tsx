@@ -4,7 +4,7 @@ import { sortedMeetingsByDayAndTime } from "../../lib/sort";
 export const revalidate = 3600;
 
 const getMeetings = async () => {
-  const meetings = await db.meeting.findMany();
+  const meetings = await db.meeting.findMany();   
   return meetings;
 };
 
@@ -17,7 +17,7 @@ export default async function MeetingPage() {
   if (!sortedMeetings) {
     return (
       <div>
-        <h3>Fuck</h3>
+        <h3>Unable to load meeting list...</h3>
       </div>
     );
   }
